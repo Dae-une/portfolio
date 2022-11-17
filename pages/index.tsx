@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header/Header';
+import Profile from '../components/Profile/Profile';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
   return (
     <div ref={scrollRef}>
       <Header visible={visible} />
+      <Profile />
     </div>
   );
 };

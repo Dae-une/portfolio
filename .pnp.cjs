@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:4.2.1"],\
             ["eslint-plugin-react", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:7.31.10"],\
             ["eslint-plugin-react-hooks", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:4.6.0"],\
+            ["gsap", "npm:3.11.3"],\
             ["next", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:13.0.3"],\
             ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
@@ -1425,6 +1426,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:4.2.1"],\
             ["eslint-plugin-react", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:7.31.10"],\
             ["eslint-plugin-react-hooks", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:4.6.0"],\
+            ["gsap", "npm:3.11.3"],\
             ["next", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:13.0.3"],\
             ["prettier", "npm:2.7.1"],\
             ["react", "npm:18.2.0"],\
@@ -2301,6 +2303,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/grapheme-splitter-npm-1.0.4-648f2bf509-0c22ec54de.zip/node_modules/grapheme-splitter/",\
           "packageDependencies": [\
             ["grapheme-splitter", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["gsap", [\
+        ["npm:3.11.3", {\
+          "packageLocation": "./.yarn/cache/gsap-npm-3.11.3-b5ab925114-b97d33ca1f.zip/node_modules/gsap/",\
+          "packageDependencies": [\
+            ["gsap", "npm:3.11.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3257,7 +3268,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/gsap", null],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-dom", "npm:18.0.9"],\
-            ["gsap", null],\
+            ["gsap", "npm:3.11.3"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:b8711437e264a20a1278d4aac4c18df987bccd3e686c88d6382adc792134b82966cc106b6031d89455f0ab294804322f82fb9541546bab9e3ed9699c8c75783d#npm:18.2.0"],\
             ["react-is", "npm:16.13.1"]\
