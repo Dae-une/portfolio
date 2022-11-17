@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header/Header';
+import '../public/GlobalStyle.css';
 
 const App = ({ Component }) => {
   return (

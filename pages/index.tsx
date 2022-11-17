@@ -24,7 +24,6 @@ const Home = () => {
 
   return (
     <div ref={scrollRef}>
-      <div style={{ minHeight: '10000px', backgroundColor: 'red', width: '100vw' }}>hi</div>
       <Header visible={visible} />
     </div>
   );
