@@ -10,8 +10,4 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  eslintConfig: {
-    extends: ['prettier'],
-  },
-  rules: {},
 };
