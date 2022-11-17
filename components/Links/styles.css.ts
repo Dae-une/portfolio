@@ -16,10 +16,12 @@ export const link = style({
   fontSize: '2.5rem',
   marginLeft: '4rem',
   cursor: 'pointer',
+  color: 'white',
   transition: 'color 0.6s',
   ':hover': {
-    color: 'yellow',
+    color: '#8482F2',
   },
+  textDecoration: 'none',
 });
 
 export const emailText = style({

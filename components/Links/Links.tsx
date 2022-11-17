@@ -1,15 +1,21 @@
 import React from 'react';
 import * as styles from './styles.css';
 
-const links = [{ text: 'GitHub.' }, { text: 'Velog.' }, { text: 'Blog.' }];
+const links = [
+  { text: 'GitHub.', url: 'https://github.com/Dae-une' },
+  { text: 'Velog.', url: 'https://velog.io/@dae_eun2' },
+  { text: 'Blog.', url: '' },
+];
 
 const Links = () => {
   return (
     <div className={styles.linkWrap}>
       <div>
         {links.map(link => (
-          <div className={styles.link} key={link.text}>
-            {link.text}
+          <div key={link.text}>
+            <a className={styles.link} target="_blank" href={link.url} rel="noreferrer noopener">
+              {link.text}
+            </a>
           </div>
         ))}
       </div>
