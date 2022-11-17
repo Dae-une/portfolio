@@ -1,7 +1,10 @@
 import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('html, body', {
-  margin: 0,
+  margin: '0',
+  backgroundColor: '#212124',
+  color: 'white',
+  overflowX: 'hidden',
 });
 
 globalStyle('body, h1, h2, h3, h4, h5, h6, p, span', {

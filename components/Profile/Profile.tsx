@@ -12,7 +12,7 @@ const Profile = () => {
   const viewportWidth = useWindowInnerWidth(-1);
 
   const backgroundSize = viewportWidth > 992 ? 140 : viewportWidth > 576 ? 108 : 80;
-  const transparentOffset = backgroundSize;
+
   return (
     <Controller>
       <Scene duration={2000} pin triggerHook="onLeave">
@@ -37,7 +37,7 @@ const Profile = () => {
                     backgroundImage: `repeating-linear-gradient(90deg, #212124 0px 0px, transparent 0px ${backgroundSize}px)`,
                   }}
                   to={{
-                    backgroundImage: `repeating-linear-gradient(90deg, #212124 0px ${transparentOffset}px, transparent 0px ${backgroundSize}px)`,
+                    backgroundImage: `repeating-linear-gradient(90deg, #212124 0px ${backgroundSize}px, transparent 0px ${backgroundSize}px)`,
                   }}
                 />
               </Timeline>

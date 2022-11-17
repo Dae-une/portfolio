@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import About from '../components/About/About';
 import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
 
@@ -27,6 +28,7 @@ const Home = () => {
     <div ref={scrollRef}>
       <Header visible={visible} />
       <Profile />
+      <About />
     </div>
   );
 };

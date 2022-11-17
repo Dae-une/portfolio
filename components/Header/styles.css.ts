@@ -7,7 +7,7 @@ export const headerWrap = recipe({
     zIndex: 100,
     top: 0,
     position: 'fixed',
-    width: '100%',
+    width: '100vw',
     transition: 'opacity 1s',
   },
   variants: {
