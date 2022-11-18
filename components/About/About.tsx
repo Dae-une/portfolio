@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div id="About">
       <Controller>
-        <Scene triggerHook="onLeave" duration={'100%'} pin>
+        <Scene triggerHook="onLeave" duration={1000} pin>
           {(progress: number) => (
             <div>
               <div>
@@ -28,7 +28,7 @@ const About = () => {
                 <Timeline totalProgress={progress} paused>
                   <Tween
                     from={{ transform: 'translate3d(0,0,0)' }}
-                    to={{ transform: 'translate3d(0,-60%,0)' }}
+                    to={{ transform: 'translate3d(0,-30%,0)' }}
                   >
                     <div className={styles.ArticleWrap}>
                       {about.map(data => (

@@ -11,7 +11,7 @@ const Project = () => {
   return (
     <div id="Project">
       <Controller>
-        <Scene pin triggerHook="onLeave" duration={'100%'}>
+        <Scene pin triggerHook="onLeave" duration={2000}>
           {(progress: number) => (
             <div>
               <ProgressBar progress={progress} />
@@ -24,7 +24,7 @@ const Project = () => {
                 <Timeline totalProgress={progress} paused>
                   <Tween
                     from={{ transform: 'translate3d(0,0,0)' }}
-                    to={{ transform: 'translate3d(0,-100%,0)' }}
+                    to={{ transform: 'translate3d(0,-80%,0)' }}
                   >
                     <div>
                       {projects.map(project => (

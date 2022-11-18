@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import * as styles from './styles.css';
 
-const links = [{ text: 'Profile' }, { text: 'About' }, { text: 'Project' }, { text: 'Concat' }];
+const links = [{ text: 'Profile' }, { text: 'About' }, { text: 'Project' }];
 
 const Header = ({ visible }) => {
   return (
