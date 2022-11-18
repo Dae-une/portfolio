@@ -3,6 +3,7 @@ import * as styles from './styles.css';
 import FadeIn from '../common/FadeIn/FadeIn';
 
 import { Timeline, Tween } from 'react-gsap';
+
 const Text = {
   title: '성장에 진심인 개발자',
   name: '김대은 입니다.',
@@ -19,8 +20,8 @@ const ProfileText = ({ progress }) => {
             paused
             target={
               <div className={styles.TitleWrap}>
-                <div className={styles.titleText}>{Text.title}</div>
-                <div className={styles.nameText}>{Text.name}</div>
+                <div>{Text.title}</div>
+                <div>{Text.name}</div>
                 <p className={styles.subTitleText}>{Text.subTitle}</p>
               </div>
             }

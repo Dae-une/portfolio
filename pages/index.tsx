@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import About from '../components/About/About';
 import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
+import Project from '../components/Project/Project';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -29,6 +30,7 @@ const Home = () => {
       <Header visible={visible} />
       <Profile />
       <About />
+      <Project />
     </div>
   );
 };

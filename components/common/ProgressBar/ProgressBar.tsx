@@ -3,7 +3,6 @@ import { Timeline, Tween } from 'react-gsap';
 import * as style from './styles.css';
 
 const ProgressBar = ({ progress }) => {
-  console.log(progress);
   return (
     <div className={style.ProgressBar}>
       <Timeline totalProgress={progress} paused>

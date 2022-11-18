@@ -11,3 +11,5 @@ export const Desc = style({
   lineHeight: '160%',
   marginBottom: '3rem',
 });
+
+export const titleWrap = style({});

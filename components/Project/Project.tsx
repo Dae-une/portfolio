@@ -1,37 +1,33 @@
 import React from 'react';
-import * as styles from './styles.css';
 import { Controller, Scene } from 'react-scrollmagic';
-
+import * as styles from './styles.css';
 import FadeIn from '../common/FadeIn/FadeIn';
 import ProgressBar from '../common/ProgressBar/ProgressBar';
-import AboutArticle from '../AboutArticle/AboutArticle';
-import { about } from '../../public/Static/About/AboutArticle';
 import { Timeline, Tween } from 'react-gsap';
+import { projects } from '../../public/Static/Project/ProjectArticle';
+import ProjectArticle from '../ProjectArticle/ProjectArticle';
 
-const About = () => {
+const Project = () => {
   return (
     <Controller>
-      <Scene triggerHook="onLeave" duration={1000} pin>
+      <Scene pin triggerHook="onLeave" duration={2000}>
         {(progress: number) => (
           <div>
-            <div>
-              <ProgressBar progress={progress} />
-            </div>
-            <section className={styles.aboutSection}>
-              <div className={styles.topDim}></div>
+            <ProgressBar progress={progress} />
+            <section className={styles.projectSection}>
               <div className={styles.textWrap}>
                 <FadeIn delay={0} duration={1000}>
-                  <div className={styles.aboutTitle}>About Me.</div>
+                  <div className={styles.projectTitle}>Project.</div>
                 </FadeIn>
               </div>
               <Timeline totalProgress={progress} paused>
                 <Tween
                   from={{ transform: 'translate3d(0,0,0)' }}
-                  to={{ transform: 'translate3d(0,-60%,0)' }}
+                  to={{ transform: 'translate3d(0,-100%,0)' }}
                 >
-                  <div className={styles.ArticleWrap}>
-                    {about.map(data => (
-                      <AboutArticle key={data.title} title={data.title} desc={data.description} />
+                  <div>
+                    {projects.map(project => (
+                      <ProjectArticle key={project.project} project={project} />
                     ))}
                   </div>
                 </Tween>
@@ -44,4 +40,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Project;

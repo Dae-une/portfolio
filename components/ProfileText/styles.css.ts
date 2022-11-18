@@ -24,8 +24,6 @@ export const TitleWrap = style({
   backgroundImage: ' linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);',
 });
 
-export const titleText = style({});
-export const nameText = style({});
 export const subTitleText = style({
   fontSize: '2rem',
 });

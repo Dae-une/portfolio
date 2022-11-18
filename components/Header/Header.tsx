@@ -2,13 +2,7 @@ import React from 'react';
 
 import * as styles from './styles.css';
 
-const links = [
-  { text: 'Home' },
-  { text: 'About' },
-  { text: 'Skill' },
-  { text: 'Project' },
-  { text: 'Concat' },
-];
+const links = [{ text: 'Home' }, { text: 'About' }, { text: 'Project' }, { text: 'Concat' }];
 
 const Header = ({ visible }) => {
   return (
