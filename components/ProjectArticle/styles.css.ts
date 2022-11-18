@@ -3,6 +3,8 @@ import { style } from '@vanilla-extract/css';
 export const articleWrap = style({
   fontSize: '1.1rem',
   lineHeight: '150%',
+  marginBottom: '6rem',
+  minWidth: '70%',
 });
 
 export const projectTitle = style({
@@ -12,9 +14,10 @@ export const projectTitle = style({
 });
 
 export const subtitle = style({
-  fontSize: '1.2rem',
-  fontWeight: '700',
-  marginTop: '1rem',
+  fontSize: '1.5rem',
+  fontWeight: '900',
+  marginTop: '2rem',
+  color: '#8482F2',
 });
 
 export const ulStyle = style({
@@ -25,6 +28,6 @@ export const linkStyle = style({
   textDecoration: 'none',
   color: 'white',
   ':hover': {
-    color: '#8482F2',
+    color: 'yellow',
   },
 });

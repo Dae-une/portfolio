@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useReducer, useState } from 'react';
 import * as styles from './styles.css';
 import { AnimatePresence } from 'framer-motion';
 import StackItem from '../StackItem/StackItem';
@@ -7,7 +7,7 @@ interface Projects {
   project: {
     project: string;
     overall: string[];
-    role: string[];
+    role?: string[];
     stacks: {
       stack: string;
       reason: string;
@@ -19,26 +19,51 @@ interface Projects {
   };
 }
 
+interface Action {
+  type: 'CLICK';
+  id: string;
+}
+
+interface State {
+  action: Action['type'] | '';
+  id: string;
+}
+
+const initialState: State = {
+  action: '',
+  id: '',
+};
+
+const reducer: React.Reducer<State, Action> = (state, action) => {
+  const reset = state.id === action.id && state.action === action.type;
+  return reset ? initialState : { action: action.type, id: action.id };
+};
+
 const ProjectArticle: React.FC<Projects> = ({ project }) => {
-  const [open, setOpen] = useState(false);
-  const onClickHandler = useCallback(() => {
-    setOpen(prev => !prev);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const onClickHandler = useCallback((id: string) => {
+    dispatch({ type: 'CLICK', id: id });
   }, []);
+
   return (
     <section className={styles.articleWrap}>
       <div className={styles.projectTitle}>{project.project}</div>
       <ul className={styles.ulStyle}>
-        {project.overall.map(overall => (
+        {project.overall?.map(overall => (
           <li key={overall}>{overall}</li>
         ))}
       </ul>
-      <div className={styles.subtitle}>역할</div>
-      <ul className={styles.ulStyle}>
-        {project.role.map(role => (
-          <li key={role}>{role}</li>
-        ))}
-      </ul>
-      <div className={styles.subtitle}>스택</div>
+      {project.role && (
+        <>
+          <div className={styles.subtitle}>Role. </div>
+          <ul className={styles.ulStyle}>
+            {project.role?.map(role => (
+              <li key={role}>{role}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      <div className={styles.subtitle}>Stack.</div>
       <div>
         <AnimatePresence initial={false}>
           {project.stacks.map(stack => (
@@ -46,14 +71,14 @@ const ProjectArticle: React.FC<Projects> = ({ project }) => {
               key={stack.stack}
               stack={stack.stack}
               reason={stack.reason}
-              open={open}
-              onClick={onClickHandler}
+              open={state.id === stack.stack}
+              onClick={() => onClickHandler(stack.stack)}
               id={stack.stack}
             />
           ))}
         </AnimatePresence>
       </div>
-      <div className={styles.subtitle}>링크</div>
+      <div className={styles.subtitle}>Links.</div>
       <ul className={styles.ulStyle}>
         {project.links.map(link => (
           <li key={link.name}>
@@ -62,7 +87,6 @@ const ProjectArticle: React.FC<Projects> = ({ project }) => {
               target="_blank"
               href={link.url}
               rel="noreferrer noopener"
-              onClick={onClickHandler}
             >
               {link.name}
             </a>

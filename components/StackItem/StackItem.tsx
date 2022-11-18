@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import * as styles from './styles.css';
+import Chevron from '../../public/Images/chevron-down.svg';
 
 const variants = {
   open: { height: 'auto' },
@@ -10,11 +11,13 @@ const variants = {
 const StackItem = ({ stack, reason, open, onClick, id }) => {
   return (
     <div className={styles.Items}>
-      <div className={styles.QuestionWrapper}>
-        <button className={styles.QuestionButton}>
+      <div className={styles.stackWrapper}>
+        <div className={styles.stack} onClick={() => onClick?.(id)}>
           <p className={styles.Label}>{stack}</p>
-          <div onClick={onClick}>버튼</div>
-        </button>
+          <div>
+            <Chevron className={styles.chevron({ open })} />
+          </div>
+        </div>
       </div>
       <div className={styles.reasonWrap}>
         <motion.div variants={variants} initial="close" animate={open ? 'open' : 'close'}>

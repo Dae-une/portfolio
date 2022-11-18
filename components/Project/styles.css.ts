@@ -7,7 +7,7 @@ export const projectSection = style({
   marginInline: '5rem',
   paddingTop: '10rem',
   display: 'flex',
-  gap: '10rem',
+  gap: '5rem',
 });
 
 export const textWrap = style({

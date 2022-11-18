@@ -14,39 +14,41 @@ const Profile = () => {
   const backgroundSize = viewportWidth > 992 ? 140 : viewportWidth > 576 ? 108 : 80;
 
   return (
-    <Controller>
-      <Scene duration={2000} pin triggerHook="onLeave">
-        {(progress: number) => (
-          <div>
-            <section className={styles.profileContainer}>
-              <Links />
-              <Image
-                width={300}
-                height={300}
-                className={styles.profileImg}
-                src={profilePic}
-                alt="profile"
-              />
-              <Timeline
-                target={<div className={styles.shadowBox} />}
-                totalProgress={progress}
-                paused
-              >
-                <Tween
-                  from={{
-                    backgroundImage: `repeating-linear-gradient(90deg, #212124 0px 0px, transparent 0px ${backgroundSize}px)`,
-                  }}
-                  to={{
-                    backgroundImage: `repeating-linear-gradient(90deg, #212124 0px ${backgroundSize}px, transparent 0px ${backgroundSize}px)`,
-                  }}
+    <div id="Profile">
+      <Controller>
+        <Scene duration={'100%'} pin triggerHook="onLeave">
+          {(progress: number) => (
+            <div>
+              <section className={styles.profileContainer}>
+                <Links />
+                <Image
+                  width={300}
+                  height={300}
+                  className={styles.profileImg}
+                  src={profilePic}
+                  alt="profile"
                 />
-              </Timeline>
-              <ProfileText progress={progress} />
-            </section>
-          </div>
-        )}
-      </Scene>
-    </Controller>
+                <Timeline
+                  target={<div className={styles.shadowBox} />}
+                  totalProgress={progress}
+                  paused
+                >
+                  <Tween
+                    from={{
+                      backgroundImage: `repeating-linear-gradient(90deg, #212124 0px 0px, transparent 0px ${backgroundSize}px)`,
+                    }}
+                    to={{
+                      backgroundImage: `repeating-linear-gradient(90deg, #212124 0px ${backgroundSize}px, transparent 0px ${backgroundSize}px)`,
+                    }}
+                  />
+                </Timeline>
+                <ProfileText progress={progress} />
+              </section>
+            </div>
+          )}
+        </Scene>
+      </Controller>
+    </div>
   );
 };
 

@@ -10,37 +10,39 @@ import { Timeline, Tween } from 'react-gsap';
 
 const About = () => {
   return (
-    <Controller>
-      <Scene triggerHook="onLeave" duration={1000} pin>
-        {(progress: number) => (
-          <div>
+    <div id="About">
+      <Controller>
+        <Scene triggerHook="onLeave" duration={'100%'} pin>
+          {(progress: number) => (
             <div>
-              <ProgressBar progress={progress} />
-            </div>
-            <section className={styles.aboutSection}>
-              <div className={styles.topDim}></div>
-              <div className={styles.textWrap}>
-                <FadeIn delay={0} duration={1000}>
-                  <div className={styles.aboutTitle}>About Me.</div>
-                </FadeIn>
+              <div>
+                <ProgressBar progress={progress} />
               </div>
-              <Timeline totalProgress={progress} paused>
-                <Tween
-                  from={{ transform: 'translate3d(0,0,0)' }}
-                  to={{ transform: 'translate3d(0,-60%,0)' }}
-                >
-                  <div className={styles.ArticleWrap}>
-                    {about.map(data => (
-                      <AboutArticle key={data.title} title={data.title} desc={data.description} />
-                    ))}
-                  </div>
-                </Tween>
-              </Timeline>
-            </section>
-          </div>
-        )}
-      </Scene>
-    </Controller>
+              <section className={styles.aboutSection}>
+                <div className={styles.topDim}></div>
+                <div className={styles.textWrap}>
+                  <FadeIn delay={0} duration={1000}>
+                    <div className={styles.aboutTitle}>About Me.</div>
+                  </FadeIn>
+                </div>
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                    from={{ transform: 'translate3d(0,0,0)' }}
+                    to={{ transform: 'translate3d(0,-60%,0)' }}
+                  >
+                    <div className={styles.ArticleWrap}>
+                      {about.map(data => (
+                        <AboutArticle key={data.title} title={data.title} desc={data.description} />
+                      ))}
+                    </div>
+                  </Tween>
+                </Timeline>
+              </section>
+            </div>
+          )}
+        </Scene>
+      </Controller>
+    </div>
   );
 };
 

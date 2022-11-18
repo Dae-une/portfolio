@@ -11,7 +11,7 @@ const Home = () => {
   const handleScroll = () => {
     if (scrollRef.current) {
       const rect = scrollRef.current.getBoundingClientRect();
-      if (rect.top <= -2060) {
+      if (rect.top <= -764) {
         setVisible(true);
       } else {
         setVisible(false);

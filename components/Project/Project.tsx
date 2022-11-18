@@ -9,34 +9,36 @@ import ProjectArticle from '../ProjectArticle/ProjectArticle';
 
 const Project = () => {
   return (
-    <Controller>
-      <Scene pin triggerHook="onLeave" duration={2000}>
-        {(progress: number) => (
-          <div>
-            <ProgressBar progress={progress} />
-            <section className={styles.projectSection}>
-              <div className={styles.textWrap}>
-                <FadeIn delay={0} duration={1000}>
-                  <div className={styles.projectTitle}>Project.</div>
-                </FadeIn>
-              </div>
-              <Timeline totalProgress={progress} paused>
-                <Tween
-                  from={{ transform: 'translate3d(0,0,0)' }}
-                  to={{ transform: 'translate3d(0,-100%,0)' }}
-                >
-                  <div>
-                    {projects.map(project => (
-                      <ProjectArticle key={project.project} project={project} />
-                    ))}
-                  </div>
-                </Tween>
-              </Timeline>
-            </section>
-          </div>
-        )}
-      </Scene>
-    </Controller>
+    <div id="Project">
+      <Controller>
+        <Scene pin triggerHook="onLeave" duration={'100%'}>
+          {(progress: number) => (
+            <div>
+              <ProgressBar progress={progress} />
+              <section className={styles.projectSection}>
+                <div className={styles.textWrap}>
+                  <FadeIn delay={0} duration={1000}>
+                    <div className={styles.projectTitle}>Project.</div>
+                  </FadeIn>
+                </div>
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                    from={{ transform: 'translate3d(0,0,0)' }}
+                    to={{ transform: 'translate3d(0,-100%,0)' }}
+                  >
+                    <div>
+                      {projects.map(project => (
+                        <ProjectArticle key={project.project} project={project} />
+                      ))}
+                    </div>
+                  </Tween>
+                </Timeline>
+              </section>
+            </div>
+          )}
+        </Scene>
+      </Controller>
+    </div>
   );
 };
 
