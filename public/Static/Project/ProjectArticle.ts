@@ -1,11 +1,14 @@
-import { reason } from './../../../components/StackItem/styles.css';
 export const projects = [
   {
     project: '포트폴리오 사이트',
     overall: ['개인 포트폴리오 사이트', '현재 사이트'],
     stacks: [
       { stack: 'Next.js', reason: 'SEO를 이용하여 검색엔진에 노출시키기 위해 사용했어요.' },
-      { stack: 'TypeScript', reason: '타입을 정의하며 에러를 사전에 방지하기 위해 사용했어요.' },
+      {
+        stack: 'TypeScript',
+        reason:
+          '타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요..',
+      },
       {
         stack: '@vanilla-extract/css',
         reason:
