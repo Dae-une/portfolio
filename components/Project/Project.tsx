@@ -6,12 +6,33 @@ import ProgressBar from '../common/ProgressBar/ProgressBar';
 import { Timeline, Tween } from 'react-gsap';
 import { projects } from '../../public/Static/Project/ProjectArticle';
 import ProjectArticle from '../ProjectArticle/ProjectArticle';
+import useWindowInnerWidth from '../../hooks/useWindowInnerWidth';
+import useWindowInnerHeight from '../../hooks/useWindowInnerHeight';
 
 const Project = () => {
+  const viewportWidth = useWindowInnerWidth(-1);
+  const viewportHeight = useWindowInnerHeight(-1);
+  const ratio = viewportWidth / viewportHeight;
+
+  const articleTranslateYOffset =
+    ratio > 1.95
+      ? '-60.2%'
+      : ratio > 1.9
+      ? '-71.05%'
+      : ratio > 1.7
+      ? '-65%'
+      : ratio >= 1.54
+      ? '-64.8%'
+      : ratio >= 0.95
+      ? '-67%'
+      : ratio > 0.55
+      ? '-67%'
+      : '-69%';
+
   return (
     <div id="Project">
       <Controller>
-        <Scene pin triggerHook="onLeave" duration={2000}>
+        <Scene pin triggerHook="onLeave" duration={'100%'}>
           {(progress: number) => (
             <div>
               <ProgressBar progress={progress} />
@@ -24,7 +45,7 @@ const Project = () => {
                 <Timeline totalProgress={progress} paused>
                   <Tween
                     from={{ transform: 'translate3d(0,0,0)' }}
-                    to={{ transform: 'translate3d(0,-80%,0)' }}
+                    to={{ transform: `translate3d(0,${articleTranslateYOffset},0)` }}
                   >
                     <div>
                       {projects.map(project => (
