@@ -16,18 +16,18 @@ const Project = () => {
 
   const articleTranslateYOffset =
     ratio > 1.95
-      ? '-60.2%'
+      ? '-70.2%'
       : ratio > 1.9
-      ? '-71.05%'
+      ? '-81.05%'
       : ratio > 1.7
-      ? '-65%'
+      ? '-75%'
       : ratio >= 1.54
-      ? '-64.8%'
+      ? '-74.8%'
       : ratio >= 0.95
-      ? '-67%'
+      ? '-77%'
       : ratio > 0.55
-      ? '-67%'
-      : '-69%';
+      ? '-77%'
+      : '-79%';
 
   return (
     <div id="Project">

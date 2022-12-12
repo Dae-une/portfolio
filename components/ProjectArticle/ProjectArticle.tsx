@@ -63,7 +63,7 @@ const ProjectArticle: React.FC<Projects> = ({ project }) => {
           </ul>
         </>
       )}
-      <div className={styles.subtitle}>Stack.</div>
+      <div className={styles.subtitle}>사용 기술들.</div>
       <div>
         <AnimatePresence initial={false}>
           {project.stacks.map(stack => (
