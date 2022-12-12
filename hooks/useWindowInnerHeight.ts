@@ -1,12 +1,12 @@
 import { useMemo, useSyncExternalStore } from "react";
 
-function useWindowInnerHeight(serverFallback) {
+function useWindowInnerHeight(serverFallback: number) {
   const getServerSnapshot = () => serverFallback;
 
   const [getSnapshot, subscribe] = useMemo(() => {
     return [
       () => window.innerHeight,
-      notify => {
+      (notify: () => void) => {
         window.addEventListener("resize", notify);
         return () => {
           window.removeEventListener("resize", notify);

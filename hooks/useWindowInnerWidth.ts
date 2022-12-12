@@ -6,10 +6,7 @@ const useWindowInnerWidth = (serverFallback: number) => {
   const [getSnapShot, subscribe] = useMemo(() => {
     return [
       () => window.innerWidth,
-      (notify: {
-        (this: Window, ev: UIEvent): any;
-        (this: Window, ev: UIEvent): any;
-      }) => {
+      (notify: () => void) => {
         window.addEventListener("resize", notify);
         return () => {
           window.removeEventListener("resize", notify);

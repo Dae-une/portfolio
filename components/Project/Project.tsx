@@ -16,18 +16,18 @@ function Project() {
 
   const articleTranslateYOffset =
     ratio > 1.95
-      ? "-70.2%"
+      ? "-90.2%"
       : ratio > 1.9
-      ? "-81.05%"
+      ? "-101.05%"
       : ratio > 1.7
-      ? "-75%"
+      ? "-95%"
       : ratio >= 1.54
-      ? "-74.8%"
+      ? "-94.8%"
       : ratio >= 0.95
-      ? "-77%"
+      ? "-97%"
       : ratio > 0.55
-      ? "-77%"
-      : "-79%";
+      ? "-97%"
+      : "-99%";
 
   return (
     <div id="Project">
