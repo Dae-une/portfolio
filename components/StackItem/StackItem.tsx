@@ -1,14 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import * as styles from './styles.css';
-import Chevron from '../../public/Images/chevron-down.svg';
+import React from "react";
+import { motion } from "framer-motion";
+import * as styles from "./styles.css";
+import Chevron from "../../public/Images/chevron-down.svg";
 
 const variants = {
-  open: { height: 'auto' },
-  close: { height: '0' },
+  open: { height: "auto" },
+  close: { height: "0" },
+};
+type Props = {
+  stack: string;
+  reason: string;
+  open: boolean;
+  onClick: (id: string) => void;
+  id: string;
 };
 
-const StackItem = ({ stack, reason, open, onClick, id }) => {
+function StackItem({ stack, reason, open, onClick, id }: Props) {
   return (
     <div className={styles.Items}>
       <div className={styles.stackWrapper}>
@@ -20,12 +27,16 @@ const StackItem = ({ stack, reason, open, onClick, id }) => {
         </div>
       </div>
       <div className={styles.reasonWrap}>
-        <motion.div variants={variants} initial="close" animate={open ? 'open' : 'close'}>
+        <motion.div
+          variants={variants}
+          initial="close"
+          animate={open ? "open" : "close"}
+        >
           <div className={styles.reason}>{reason}</div>
         </motion.div>
       </div>
     </div>
   );
-};
+}
 
 export default StackItem;

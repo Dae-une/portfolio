@@ -1,17 +1,21 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import * as styles from './styles.css';
+import React from "react";
+import { Link } from "react-scroll";
+import * as styles from "./styles.css";
 
-const links = [{ text: 'Profile' }, { text: 'About' }, { text: 'Project' }];
+const links = [{ text: "Profile" }, { text: "About" }, { text: "Project" }];
 
-const Header = ({ visible }) => {
+type Props = {
+  visible: boolean;
+};
+
+function Header({ visible }: Props) {
   return (
     <div className={styles.headerWrap({ visible })}>
       <div className={styles.navWrap}>
         <ul className={styles.TextLinkList}>
           {links.map(link => (
             <li className={styles.TextLink} key={link.text}>
-              <Link to={link.text} spy={true} smooth={true}>
+              <Link to={link.text} spy smooth>
                 {link.text}
               </Link>
             </li>
@@ -20,6 +24,6 @@ const Header = ({ visible }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Header;

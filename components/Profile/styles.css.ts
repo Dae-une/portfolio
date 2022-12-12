@@ -1,18 +1,18 @@
-import { style } from '@vanilla-extract/css';
+import { style } from "@vanilla-extract/css";
 
 export const profileContainer = style({
-  display: 'flex',
+  display: "flex",
 });
 
 export const profileImg = style({
-  width: '75vw',
-  height: '100vh',
+  width: "75vw",
+  height: "100vh",
 });
 
 export const shadowBox = style({
-  position: 'absolute',
+  position: "absolute",
   top: 0,
   left: 0,
-  width: '100%',
-  height: '100vh',
+  width: "100%",
+  height: "100vh",
 });

@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import * as styles from './style.css';
-import FadeIn from '../common/FadeIn/FadeIn';
+import React from "react";
+import * as styles from "./style.css";
+import FadeIn from "../common/FadeIn/FadeIn";
 
-const AboutArticle = ({ title, desc }) => {
+type Props = {
+  title: string;
+  desc: string;
+};
+
+function AboutArticle({ title, desc }: Props) {
   return (
     <FadeIn duration={600} delay={0}>
       <div>
@@ -11,6 +16,6 @@ const AboutArticle = ({ title, desc }) => {
       </div>
     </FadeIn>
   );
-};
+}
 
 export default AboutArticle;

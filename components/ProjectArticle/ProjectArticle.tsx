@@ -1,7 +1,7 @@
-import React, { useCallback, useReducer, useState } from 'react';
-import * as styles from './styles.css';
-import { AnimatePresence } from 'framer-motion';
-import StackItem from '../StackItem/StackItem';
+import React, { useCallback, useReducer } from "react";
+import { AnimatePresence } from "framer-motion";
+import * as styles from "./styles.css";
+import StackItem from "../StackItem/StackItem";
 
 interface Projects {
   project: {
@@ -20,18 +20,18 @@ interface Projects {
 }
 
 interface Action {
-  type: 'CLICK';
+  type: "CLICK";
   id: string;
 }
 
 interface State {
-  action: Action['type'] | '';
+  action: Action["type"] | "";
   id: string;
 }
 
 const initialState: State = {
-  action: '',
-  id: '',
+  action: "",
+  id: "",
 };
 
 const reducer: React.Reducer<State, Action> = (state, action) => {
@@ -42,7 +42,7 @@ const reducer: React.Reducer<State, Action> = (state, action) => {
 const ProjectArticle: React.FC<Projects> = ({ project }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const onClickHandler = useCallback((id: string) => {
-    dispatch({ type: 'CLICK', id: id });
+    dispatch({ type: "CLICK", id });
   }, []);
 
   return (

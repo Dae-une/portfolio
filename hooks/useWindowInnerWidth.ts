@@ -1,15 +1,18 @@
-import { useMemo, useSyncExternalStore } from 'react';
+import { useMemo, useSyncExternalStore } from "react";
 
-const useWindowInnerWidth = serverFallback => {
+const useWindowInnerWidth = (serverFallback: number) => {
   const getServerSnapShot = () => serverFallback;
 
   const [getSnapShot, subscribe] = useMemo(() => {
     return [
       () => window.innerWidth,
-      notify => {
-        window.addEventListener('resize', notify);
+      (notify: {
+        (this: Window, ev: UIEvent): any;
+        (this: Window, ev: UIEvent): any;
+      }) => {
+        window.addEventListener("resize", notify);
         return () => {
-          window.removeEventListener('resize', notify);
+          window.removeEventListener("resize", notify);
         };
       },
     ];
@@ -17,7 +20,7 @@ const useWindowInnerWidth = serverFallback => {
 
   return useSyncExternalStore(
     subscribe,
-    typeof window !== 'undefined' ? getSnapShot : getServerSnapShot,
+    typeof window !== "undefined" ? getSnapShot : getServerSnapShot,
     getServerSnapShot,
   );
 };

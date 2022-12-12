@@ -1,22 +1,23 @@
-import React from 'react';
-import Image from 'next/image';
-import * as styles from './styles.css';
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
-import profilePic from '../../public/Images/profile_Image.jpeg';
-import useWindowInnerWidth from '../../hooks/useWindowInnerWidth';
-import Links from '../Links/Links';
-import ProfileText from '../ProfileText/ProfileText';
+import React from "react";
+import Image from "next/image";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from "react-gsap";
+import * as styles from "./styles.css";
+import profilePic from "../../public/Images/profile_Image.jpeg";
+import useWindowInnerWidth from "../../hooks/useWindowInnerWidth";
+import Links from "../Links/Links";
+import ProfileText from "../ProfileText/ProfileText";
 
-const Profile = () => {
+function Profile() {
   const viewportWidth = useWindowInnerWidth(-1);
 
-  const backgroundSize = viewportWidth > 992 ? 140 : viewportWidth > 576 ? 108 : 80;
+  const backgroundSize =
+    viewportWidth > 992 ? 140 : viewportWidth > 576 ? 108 : 80;
 
   return (
     <div id="Profile">
       <Controller>
-        <Scene duration={'100%'} pin triggerHook="onLeave">
+        <Scene duration="100%" pin triggerHook="onLeave">
           {(progress: number) => (
             <div>
               <section className={styles.profileContainer}>
@@ -50,6 +51,6 @@ const Profile = () => {
       </Controller>
     </div>
   );
-};
+}
 
 export default Profile;

@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
-import About from '../components/About/About';
-import Header from '../components/Header/Header';
-import Profile from '../components/Profile/Profile';
-import Project from '../components/Project/Project';
+import { useEffect, useRef, useState } from "react";
+import About from "../components/About/About";
+import Header from "../components/Header/Header";
+import Profile from "../components/Profile/Profile";
+import Project from "../components/Project/Project";
 
-const Home = () => {
+function Home() {
   const [visible, setVisible] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -20,9 +20,9 @@ const Home = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -33,6 +33,6 @@ const Home = () => {
       <Project />
     </div>
   );
-};
+}
 
 export default Home;

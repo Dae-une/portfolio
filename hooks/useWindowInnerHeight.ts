@@ -1,4 +1,4 @@
-import { useMemo, useSyncExternalStore } from 'react';
+import { useMemo, useSyncExternalStore } from "react";
 
 function useWindowInnerHeight(serverFallback) {
   const getServerSnapshot = () => serverFallback;
@@ -7,9 +7,9 @@ function useWindowInnerHeight(serverFallback) {
     return [
       () => window.innerHeight,
       notify => {
-        window.addEventListener('resize', notify);
+        window.addEventListener("resize", notify);
         return () => {
-          window.removeEventListener('resize', notify);
+          window.removeEventListener("resize", notify);
         };
       },
     ];
@@ -17,7 +17,7 @@ function useWindowInnerHeight(serverFallback) {
 
   return useSyncExternalStore(
     subscribe,
-    typeof window !== 'undefined' ? getSnapshot : getServerSnapshot,
+    typeof window !== "undefined" ? getSnapshot : getServerSnapshot,
     getServerSnapshot,
   );
 }

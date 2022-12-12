@@ -1,8 +1,14 @@
-import React from 'react';
-import { SimpleReveal } from 'simple-reveal';
-import 'simple-reveal/index.css';
+import React from "react";
+import { SimpleReveal } from "simple-reveal";
+import "simple-reveal/index.css";
 
-const FadeIn = ({ children, duration, delay }) => {
+type Props = {
+  children: React.ReactNode;
+  duration: number;
+  delay: number;
+};
+
+function FadeIn({ children, duration, delay }: Props) {
   return (
     <SimpleReveal
       render={({ ref, cn, style }) => (
@@ -13,8 +19,8 @@ const FadeIn = ({ children, duration, delay }) => {
       duration={duration}
       delay={delay}
       initialTransform="translateY(60px)"
-    ></SimpleReveal>
+    />
   );
-};
+}
 
 export default FadeIn;
