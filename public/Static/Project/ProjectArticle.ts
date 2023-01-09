@@ -1,5 +1,42 @@
 const projects = [
   {
+    project: "가계부 및 일정관리 웹앱",
+    overall: ["구글 로그인", "가계부 CRUD", "일정 CRUD", "가계부 파이차트"],
+    stacks: [
+      {
+        stack: "React",
+        reason:
+          "컴포넌트를 이용해서 재사용 가능하며, 논리적으로 파일을 나누어서 개발을 진행할 수 있어 사용했어요.",
+      },
+      {
+        stack: "TypeScript",
+        reason:
+          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
+      },
+      {
+        stack: "Zustand",
+        reason:
+          "장황한 보일러플레이트 없이, 간편하게 글로벌 스테이트를 관리하며, 데이터를 변환할수 있어 사용했어요.",
+      },
+      {
+        stack: "Emotion",
+        reason:
+          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
+      },
+      {
+        stack: "DayJS",
+        reason:
+          "쉽고 간단하게 Date를 조작할 수 있으며, 불변성을 지니고 있고, 작은 용량을 가지고 있어 사용했어요. ",
+      },
+      {
+        stack: "FireBase",
+        reason:
+          "간단하게 구글 로그인을 구현할수 있으며, DB를 읽고 쓰기 위해 사용했어요. ",
+      },
+    ],
+    links: [{ name: "GitHub Repo", url: "https://github.com/Dae-une/Ledger" }],
+  },
+  {
     project: "포트폴리오 사이트",
     overall: ["개인 포트폴리오 사이트", "현재 사이트"],
     stacks: [
@@ -10,7 +47,7 @@ const projects = [
       {
         stack: "TypeScript",
         reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요..",
+          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
       },
       {
         stack: "@vanilla-extract/css",
