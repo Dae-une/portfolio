@@ -32,7 +32,7 @@ function Project() {
   return (
     <div id="Project">
       <Controller>
-        <Scene pin triggerHook="onLeave" duration="100%">
+        <Scene pin triggerHook="onLeave" duration={2000}>
           {(progress: number) => (
             <div>
               <ProgressBar progress={progress} />
