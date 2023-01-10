@@ -42,7 +42,8 @@ const projects = [
     stacks: [
       {
         stack: "Next.js",
-        reason: "SEO를 이용하여 검색엔진에 노출시키기 위해 사용했어요.",
+        reason:
+          "페이지의 내용에 변화가 자주 없으며, 정적 사이트로 미리 만들어 빠르게 보여주기 좋은 SSG를 위해 사용했어요.",
       },
       {
         stack: "TypeScript",
