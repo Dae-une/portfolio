@@ -4,7 +4,7 @@ import * as styles from "./styles.css";
 const links = [
   { text: "GitHub.", url: "https://github.com/Dae-une" },
   { text: "Velog.", url: "https://velog.io/@dae_eun2" },
-  // { text: "Blog.", url: "" },
+  { text: "Blog.", url: "https://daeeun-dev.vercel.app/" },
 ];
 
 function Links() {

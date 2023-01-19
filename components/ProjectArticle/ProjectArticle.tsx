@@ -6,7 +6,7 @@ import StackItem from "../StackItem/StackItem";
 interface Projects {
   project: {
     project: string;
-    overall: string[];
+    overall?: string[];
     role?: string[];
     stacks: {
       stack: string;

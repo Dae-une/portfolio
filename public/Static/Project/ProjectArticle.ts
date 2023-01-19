@@ -1,5 +1,33 @@
 const projects = [
   {
+    project: "개인 블로그",
+    stacks: [
+      {
+        stack: "Next.js",
+        reason: "SEO를 활용하여 검색엔진에 노출시키기 위해 사용했어요.",
+      },
+      {
+        stack: "TypeScript",
+        reason:
+          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
+      },
+      {
+        stack: "Emotion",
+        reason:
+          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
+      },
+      {
+        stack: "Yarn Berry",
+        reason:
+          "의존성 관리와 zero install을 이용해 빌드 및 배포시 시간을 절약하기 위해 사용했어요.",
+      },
+    ],
+    links: [
+      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
+      { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
+    ],
+  },
+  {
     project: "가계부 및 일정관리 웹앱",
     overall: ["구글 로그인", "가계부 CRUD", "일정 CRUD", "가계부 파이차트"],
     stacks: [
@@ -57,7 +85,7 @@ const projects = [
       },
     ],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
+      { name: "GitHub Repo", url: "https://github.com/Dae-une/portfolio" },
     ],
   },
   {
