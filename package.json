@@ -5,7 +5,7 @@
   "repository": "https://github.com/Dae-une/daeeun.dev.git",
   "author": "Dae-une <ko301201@naver.com>",
   "license": "MIT",
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@3.5.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.9.1",
+    "@vanilla-extract/next-plugin": "^2.1.1",
     "@vanilla-extract/recipes": "^0.3.0",
     "framer-motion": "^7.6.7",
     "gsap": "^3.11.3",
@@ -26,7 +27,7 @@
     "sharp": "^0.31.2",
     "simple-reveal": "^0.6.0",
     "typescript": "^4.8.4",
-    "@vanilla-extract/next-plugin": "^2.1.1"
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
@@ -36,6 +37,7 @@
     "@types/react-scroll": "^1.8.5",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
+    "@yarnpkg/sdks": "^3.0.0-rc.42",
     "eslint": "^8.29.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",

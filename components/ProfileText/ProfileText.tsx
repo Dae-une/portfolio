@@ -14,6 +14,8 @@ type Props = {
 };
 
 function ProfileText({ progress }: Props) {
+  console.log(progress);
+
   return (
     <div className={styles.TextContainer}>
       <div className={styles.TitleContainer}>
