@@ -10,7 +10,7 @@ type Props = {
 function AboutArticle({ title, desc }: Props) {
   return (
     <FadeIn duration={600} delay={0}>
-      <div>
+      <div className={styles.Layout}>
         <div className={styles.Title}>{title}</div>
         <div className={styles.Desc}>{desc}</div>
       </div>

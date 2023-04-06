@@ -1,21 +1,22 @@
 import { style } from "@vanilla-extract/css";
 
 export const aboutSection = style({
-  height: "100vh",
+  height: "80vh",
   overflow: "hidden",
   position: "relative",
-  marginInline: "5rem",
   paddingTop: "10rem",
   display: "flex",
-  gap: "5rem",
+  maxHeight: "100vh",
 });
 
-export const textWrap = style({
-  width: "30%",
+export const TitleContainer = style({
+  width: "25%",
   position: "relative",
+  paddingLeft: "5rem",
+  paddingTop: "2rem",
 });
 
-export const aboutTitle = style({
+export const Title = style({
   fontSize: "3.75rem",
   margin: "0 auto",
   textAlign: "left",
@@ -24,8 +25,20 @@ export const aboutTitle = style({
   left: "0",
 });
 
-export const ArticleWrap = style({
-  maxWidth: "50rem",
+export const ArticleContainer = style({
+  width: "75%",
+  backgroundColor: "#FEFDFF",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  position: "relative",
+});
+
+export const ArticleWrapper = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: "120px",
 });
 
 const baseDim = style({

@@ -1,30 +1,17 @@
 import { style } from "@vanilla-extract/css";
 
-export const projectSection = style({
-  overflow: "hidden",
-  position: "relative",
-  marginInline: "5rem",
-  paddingTop: "10rem",
+export const ProjectSection = style({
   display: "flex",
-  gap: "5rem",
+  height: "100vh",
+  backgroundColor: "#292831",
 });
 
-export const textWrap = style({
-  width: "30%",
-  position: "relative",
-});
-
-export const projectTitle = style({
-  fontSize: "3.75rem",
-  margin: "0 auto",
-  textAlign: "left",
-  position: "sticky",
-  top: "0",
-  left: "0",
-});
-
-export const articleWrap = style({
-  display: "flex",
-  flexDirection: "column",
-  height: "100%",
+export const ProjectContainer = style({
+  display: "grid",
+  gridTemplateRows: " repeat(2, minmax(200px, auto))",
+  gridTemplateColumns: " repeat(8, minmax(150px, auto))",
+  gridAutoFlow: "column",
+  padding: "10rem",
+  columnGap: "10rem",
+  rowGap: "5rem",
 });
