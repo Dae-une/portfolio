@@ -27,5 +27,6 @@ module.exports = {
     // ts파일에서 tsx구문 허용(Next.js)
     "react/jsx-filename-extension": [1, { extensions: [".ts", ".tsx"] }],
     "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
   },
 };

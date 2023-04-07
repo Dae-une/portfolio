@@ -1,220 +1,217 @@
-const imagePath = "@public/Images/";
+import { ProjectType } from "../../../types/type";
 
-const PROJECTS = [
+const PROJECTS: ProjectType[] = [
   {
     title: "소심한 총무",
     param: "sosim",
+    desc: "소심한 성격의 총무들을 위한 벌금 관리 서비스",
+    done: [
+      { title: "Webpack, Babel, Ts, Eslint, Prettier 세팅" },
+      { title: "개발 편의성을 위한 공용 컴포넌트 개발 (모달, 드롭다운, 버튼)" },
+      {
+        title: "무한 스크롤 개발",
+        desc: [
+          "페이지네이션 과 무한스크롤 중 디자인 과 사용자의 편의성을 고려 하였을때 무한스크롤이 더 적합하다고 판단",
+        ],
+      },
+      {
+        title: "소셜 로그인 (카카오),회원가입,회원 탈퇴 개발",
+        desc: [
+          "보안성 및 유저의 편의성을 위해 accessToken과 refreshToken을이용",
+        ],
+      },
+      { title: "달력 컴포넌트 개발" },
+      { title: "모임 관리 (수정, 탈퇴, 추가) 기능 개발" },
+      {
+        title:
+          "Gtihub Actions를 이용한 CI/CD 자동화 및 CloudFront를 이용한 배포",
+      },
+    ],
+
     stacks: [
-      {
-        stack: "Next.js",
-        reason: "SEO를 활용하여 검색엔진에 노출시키기 위해 사용했어요.",
-      },
-      {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
-      },
-      {
-        stack: "Emotion",
-        reason:
-          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
-      },
-      {
-        stack: "Yarn Berry",
-        reason:
-          "의존성 관리와 zero install을 이용해 빌드 및 배포시 시간을 절약하기 위해 사용했어요.",
-      },
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Emotion",
+      "Recoil",
+      "React-Query",
+      "Yarn Berry",
     ],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
-      { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
+      { name: "GitHub Repo", url: "https://github.com/so-sim/front" },
+      { name: "사이트 바로가기", url: "https://sosim-manager.com/" },
     ],
-    image: `${imagePath}sosim.svg`,
   },
   {
     title: "COPYT",
     param: "copyt",
+    desc: "ChatGPT를 활용한 문자 A/B테스트를 제공해주는 서비스",
+    done: [
+      { title: "Webpack, Babel, Ts, Eslint, Prettier 세팅" },
+      {
+        title:
+          "공용 컴포넌트 개발 (모달, 버튼, 드롭다운, 페이지네이션, 아코디언 컴포넌트 )",
+      },
+      {
+        title: "카피(문자 추천 기능) CRUD, 캠페인(문자 발송 기능) CRUD 개발",
+      },
+      {
+        title:
+          "카피 및 캠페인 생성 미완료 시, 모달 및 팝업을 이용하여 실수로 인한 페이지 이탈 방지",
+      },
+      { title: "로그인, 회원가입 기능 개발" },
+      {
+        title:
+          "Gtihub Actions를 이용한 CI/CD 자동화 및 CloudFront를 이용한 배포",
+      },
+    ],
     stacks: [
-      {
-        stack: "Next.js",
-        reason: "SEO를 활용하여 검색엔진에 노출시키기 위해 사용했어요.",
-      },
-      {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
-      },
-      {
-        stack: "Emotion",
-        reason:
-          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
-      },
-      {
-        stack: "Yarn Berry",
-        reason:
-          "의존성 관리와 zero install을 이용해 빌드 및 배포시 시간을 절약하기 위해 사용했어요.",
-      },
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Styled-component",
+      "Recoil",
+      "React-Query",
+      "Yarn Berry",
     ],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
-      { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/swcamp-teamP03/COPYT_Frontend",
+      },
+      { name: "사이트 바로가기", url: "https://copyt.softr.app/" },
     ],
-    image: `${imagePath}copyt.svg`,
   },
   {
-    title: "감다고",
+    title: "감정을 먹는 다마고치",
     param: "gamdago",
-    stacks: [
+    desc: "일기를 기록하여 다마고치와 감정을 공유하며 성장시키는 서비스",
+    done: [
       {
-        stack: "Next.js",
-        reason: "SEO를 활용하여 검색엔진에 노출시키기 위해 사용했어요.",
-      },
-      {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
-      },
-      {
-        stack: "Emotion",
-        reason:
-          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
-      },
-      {
-        stack: "Yarn Berry",
-        reason:
-          "의존성 관리와 zero install을 이용해 빌드 및 배포시 시간을 절약하기 위해 사용했어요.",
+        title: "메인 화면 개발",
+        desc: [
+          "다마고치 감정 및 성장 액션 구현",
+          "초기엔 WebM을 이용하였으나 아이폰 미 호환 이슈와 용량을 줄이기위해 svg를 이용하여 애니메이션 구현",
+          "다마고치 성장률 프로그레스 바 구현",
+        ],
       },
     ],
+    stacks: ["JavaScript", "React", "TypeScript", "Styled-component", "Recoil"],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
-      { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/egghit/gammeokda",
+      },
+      { name: "사이트 바로가기", url: "https://gammeokda.vercel.app/" },
     ],
-    image: `${imagePath}gamdago.svg`,
   },
   {
     title: "개인 블로그",
     param: "blog",
-    stacks: [
+    desc: "개인 공부 기록 저장소",
+    done: [
+      { title: "mdx 를 html로 변환하여 게시글 작성" },
       {
-        stack: "Next.js",
-        reason: "SEO를 활용하여 검색엔진에 노출시키기 위해 사용했어요.",
+        title: "Giscus를 이용한 댓글 기능",
       },
       {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
+        title: "Table of Contents 를 이용하여 목차를 한 눈에 볼 수 있도록 구현",
       },
       {
-        stack: "Emotion",
-        reason:
-          "컴포넌트 위주의 프로젝트에서 개발 효율성을 중요시 하고, 필요한 CSS 스타일 요소만 로딩하기 때문에 사용했어요.  ",
+        title: "검색 기능 및 태그 별 조회 기능 ",
       },
-      {
-        stack: "Yarn Berry",
-        reason:
-          "의존성 관리와 zero install을 이용해 빌드 및 배포시 시간을 절약하기 위해 사용했어요.",
-      },
+      { title: "모바일 반응형 디자인 적용" },
     ],
+    stacks: ["JavaScript", "React", "TypeScript", "Emotion", "Next.Js"],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
-      { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/Dae-une/Daeeun.dev",
+      },
+      { name: "사이트 바로가기", url: "https://daeeun-dev.vercel.app/" },
     ],
-    image: `${imagePath}/blog.svg`,
   },
   {
     title: "포트폴리오 사이트",
     param: "portfolio",
-    overall: ["개인 포트폴리오 사이트", "현재 사이트"],
+    desc: "포트폴리오 웹 사이트",
+    done: [{ title: "마우스 스크롤을 이용한 애니메이션 구현" }],
     stacks: [
-      {
-        stack: "Next.js",
-        reason:
-          "페이지의 내용에 변화가 자주 없으며, 정적 사이트로 미리 만들어 빠르게 보여주기 좋은 SSG를 위해 사용했어요.",
-      },
-      {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
-      },
-      {
-        stack: "@vanilla-extract/css",
-        reason:
-          "css in js 가 아닌 ts를 이용함으로써 \n작성하는 모든 스타일에 대한 타입 추론이 가능하여 안전한 코드를 위하여 사용했어요. ",
-      },
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "@Vanilla-extract",
+      "Next.Js",
     ],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/portfolio" },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/Dae-une/portfolio",
+      },
+      {
+        name: "사이트 바로가기",
+        url: "https://portfolio-two-theta-38.vercel.app/",
+      },
     ],
-    image: `${imagePath}/portfolio.svg`,
   },
   {
-    title: "당프소 클론코딩",
+    title: "당프소 클론 코딩",
     param: "daangpso",
-    overall: ["개인 포트폴리오 사이트", "현재 사이트"],
-    stacks: [
-      {
-        stack: "Next.js",
-        reason:
-          "페이지의 내용에 변화가 자주 없으며, 정적 사이트로 미리 만들어 빠르게 보여주기 좋은 SSG를 위해 사용했어요.",
-      },
-      {
-        stack: "TypeScript",
-        reason:
-          "타입을 정의함으로써 인자나 프로터티의 자동완성으로 개발에 편의성을 얻을 수 있으며\n실행 전에 에러를 방지할 수 있어 사용했어요.",
-      },
-      {
-        stack: "@vanilla-extract/css",
-        reason:
-          "css in js 가 아닌 ts를 이용함으로써 \n작성하는 모든 스타일에 대한 타입 추론이 가능하여 안전한 코드를 위하여 사용했어요. ",
-      },
-    ],
+    desc: "당근마켓 프로덕트 디자이너 채용 사이트 클론 코딩",
+    done: [{ title: "마우스 스크롤을 이용한 애니메이션 구현" }],
+    stacks: ["JavaScript", "React", "Emotion", "Next.Js"],
     links: [
-      { name: "GitHub Repo", url: "https://github.com/Dae-une/portfolio" },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/Dae-une/daangn_product-designer_clone",
+      },
     ],
-    image: `${imagePath}/daangpso.svg`,
   },
   {
     title: "Weekly Run",
     param: "weekly_run",
-    overall: ["러닝SNS 서비스", "디자이너 1명과 개발자 6명으로 6주 진행"],
-    role: [
-      "Team Leader",
-      "초기 세팅, 런닝 기록 및 공유, 랭킹 시스템, 추천검색어, 댓글 CRUD, 배포 등 담당",
+    desc: "러닝 기록 및 공유 SNS 서비스",
+    done: [
+      { title: "Team Leader, PM" },
+      {
+        title: "Webpack, TS , Eslint, Prettier, PWA 세팅",
+      },
+      {
+        title: "소셜 로그인 (카카오) 개발",
+      },
+      {
+        title: "러닝 기록 CRUD, 댓글 CURD 기능 개발",
+      },
+      {
+        title: "랭킹 시스템 개발",
+      },
+      {
+        title: "추천 검색어 기능",
+        desc: ["디바운스를 이용하여 불필요하거나, 과도한 요청 방지"],
+      },
+      {
+        title:
+          "Gtihub Actions를 이용한 CI/CD 자동화 및 CloudFront를 이용한 배포",
+      },
     ],
     stacks: [
-      {
-        stack: "React-Query",
-        reason:
-          "작은 사이즈의 프로젝트이긴 하지만, 클라이언트의 복잡도가 높지 않고,\n클라이언트 데이터보단 서버데이터에 높은 비중을 두고 있어 효율적으로 서버데이터를 관리하기 위해 사용했어요.",
-      },
-      {
-        stack: "Recoil",
-        reason:
-          "리액트 쿼리를 사용함으로써, 클라이언트 데이터를 관리할 툴이 필요해졌어요.\nContext API의 명확한 단점이 존재하여 쉬운 러닝커브와 다양한 데이터 변환이 가능한 Recoil을 채택했어요.",
-      },
-      {
-        stack: "Yarn Berry",
-        reason:
-          "기존 NPM을 주로 사용하였으나, 의존성 에러 와 node_modules의 비대함이 불편했어요.\nYarn Berry를 사용하여 의존성을 엄격하게 관리하였어요.",
-      },
-      {
-        stack: "broweser-image-compression",
-        reason:
-          "프로젝트 특성상 많은 이미지를 사용할 수 밖에 없었어요.\n이 때, 이미지의 용량이 크다면 로드 하는데 소요되는 시간이 길어질것으로 예상하여 사이지를 줄여 더 나은 UX를 제공하기 위해 사용했어요.",
-      },
-      {
-        stack: "@lodable/component",
-        reason:
-          "Code Spitting 을 활용하여, 불필요한 페이지의 컴포넌트까지 읽어오는것을 막아\n초기 로딩속도를 빠르게하여 UX를 높이고 싶어 채택하였어요.",
-      },
+      "JavaScript",
+      "React",
+      "React-Query",
+      "Recoil",
+      "Yarn Berry",
+      "Styled-components",
     ],
     links: [
       {
         name: "GitHub Repo",
         url: "https://github.com/Dae-une/WeeklyRun-FE",
       },
+      {
+        name: "Demo",
+        url: "https://www.youtube.com/watch?v=wmHWVBSeeHE",
+      },
     ],
-    image: `${imagePath}weekly_run.svg`,
   },
 ];
 

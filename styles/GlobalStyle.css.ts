@@ -5,6 +5,7 @@ globalStyle("html, body", {
   backgroundColor: "#212124",
   color: "white",
   overflowX: "hidden",
+  fontFamily: "Pretendard",
 });
 
 globalStyle("body, h1, h2, h3, h4, h5, h6, p, span", {
@@ -13,4 +14,9 @@ globalStyle("body, h1, h2, h3, h4, h5, h6, p, span", {
   margin: "0",
   padding: "0",
   wordBreak: "keep-all",
+});
+
+globalStyle("li, ul", {
+  margin: 0,
+  padding: 0,
 });
