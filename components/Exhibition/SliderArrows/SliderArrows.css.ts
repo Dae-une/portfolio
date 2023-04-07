@@ -1,15 +1,41 @@
-import { style } from "@vanilla-extract/css";
+import { recipe } from "@vanilla-extract/recipes";
 
-const baseArrow = style({
-  position: "absolute",
-  width: "100px",
-  bottom: "5vh",
-  backgroundColor: "inherit",
-  border: "none",
-  cursor: "pointer",
-  zIndex: "10",
+export const RightArrow = recipe({
+  base: {
+    position: "absolute",
+    width: "100px",
+    bottom: "8vh",
+    backgroundColor: "inherit",
+    border: "none",
+    cursor: "pointer",
+    zIndex: "10",
+    right: "35vw",
+    transition: "opacity 1s ease",
+  },
+  variants: {
+    isHover: {
+      true: { opacity: 0.5 },
+      false: { opacity: 0.2 },
+    },
+  },
 });
 
-export const RightArrow = style([baseArrow, { right: "35vw" }]);
-
-export const LeftArrow = style([baseArrow, { left: "35vw" }]);
+export const LeftArrow = recipe({
+  base: {
+    position: "absolute",
+    width: "100px",
+    bottom: "8vh",
+    backgroundColor: "inherit",
+    border: "none",
+    cursor: "pointer",
+    zIndex: "10",
+    left: "35vw",
+    transition: "opacity 1s ease",
+  },
+  variants: {
+    isHover: {
+      true: { opacity: 0.5 },
+      false: { opacity: 0.2 },
+    },
+  },
+});
