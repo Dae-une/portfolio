@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import * as styles from "./ProjectCard.css";
 import { ProjectType } from "../../../types/type";
 
@@ -10,16 +10,18 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ margin, project }) => {
+  const router = useRouter();
+  const onScrollMove = () => {
+    sessionStorage.setItem("scroll", `${window.scrollY}`);
+    router.push({
+      pathname: "/exhibition",
+      query: { project: project.param },
+    });
+  };
+
   return (
-    <div className={styles.Card({ margin })}>
-      <Link
-        href={{
-          pathname: "/exhibition",
-          query: { project: project.param },
-        }}
-      >
-        <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
-      </Link>
+    <div className={styles.Card({ margin })} onClick={onScrollMove}>
+      <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
     </div>
   );
 };

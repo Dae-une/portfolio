@@ -26,6 +26,14 @@ function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const scrollY = sessionStorage.getItem("scroll");
+
+    if (scrollY) {
+      window.scrollTo(0, Number(scrollY));
+    }
+  }, []);
+
   return (
     <div ref={scrollRef}>
       <Header visible={visible} />

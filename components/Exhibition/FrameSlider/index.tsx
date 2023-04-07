@@ -8,6 +8,7 @@ import Painting from "../Painting";
 import PROJECTS from "../../../public/Static/Project/ProjectArticle";
 import { NextArrow, PrevArrow } from "../SliderArrows";
 import * as styles from "./FrameSlider.css";
+import Close from "../../../public/Images/close.svg";
 
 const FrameSlider = () => {
   const router = useRouter();
@@ -36,6 +37,10 @@ const FrameSlider = () => {
     ease: [0, 0, 0, 0, 1],
   };
 
+  const onClickGoBack = () => {
+    router.back();
+  };
+
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (!light) {
@@ -61,6 +66,10 @@ const FrameSlider = () => {
       >
         <div className={styles.Lgiht({ light })} />
       </motion.div>
+      <button className={styles.Close} type="button" onClick={onClickGoBack}>
+        <Close />
+        CLOSE
+      </button>
     </>
   );
 };
