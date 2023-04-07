@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-
+import Image from "next/image";
 import { ProjectType } from "../../types/type";
 import * as styles from "./ProjectCard.css";
 
@@ -11,7 +11,7 @@ interface ProjectCardProps {
 const ProjectCard: FC<ProjectCardProps> = ({ margin, project }) => {
   return (
     <div className={styles.Card({ margin })}>
-      <div className={styles.Banner}>{project.image}</div>
+      <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
     </div>
   );
 };

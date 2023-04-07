@@ -4,7 +4,7 @@ export const aboutSection = style({
   height: "80vh",
   overflow: "hidden",
   position: "relative",
-  paddingTop: "10rem",
+  paddingTop: "5rem",
   display: "flex",
   maxHeight: "100vh",
 });

@@ -6,7 +6,7 @@ export const Card = recipe({
     width: "100%",
     height: "100%",
     position: "relative",
-    backgroundColor: "white",
+    backgroundColor: "#FEFDFF",
     padding: "0",
     margin: "0",
     textAlign: "left",

@@ -4,9 +4,9 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import * as styles from "./styles.css";
 import profilePic from "../../public/Images/profile_Image.jpeg";
-import useWindowInnerWidth from "../../hooks/useWindowInnerWidth";
-import Links from "../Links/Links";
-import ProfileText from "../ProfileText/ProfileText";
+import useWindowInnerWidth from "../../../hooks/useWindowInnerWidth";
+import Links from "../../Links/Links";
+import ProfileText from "../../ProfileText/ProfileText";
 
 function Profile() {
   const viewportWidth = useWindowInnerWidth(-1);

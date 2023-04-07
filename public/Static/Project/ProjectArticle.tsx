@@ -1,14 +1,9 @@
-import Blog from "../../Images/blog.svg";
-import Copyt from "../../Images/copyt.svg";
-import Daangpso from "../../Images/daangpso.svg";
-import Portfolio from "../../Images/portfolio.svg";
-import Gamdago from "../../Images/gamdago.svg";
-import WeeklyRun from "../../Images/weekly_run.svg";
-import Sosim from "../../Images/sosim.svg";
+const imagePath = "@public/Images/";
 
 const PROJECTS = [
   {
     title: "소심한 총무",
+    param: "sosim",
     stacks: [
       {
         stack: "Next.js",
@@ -34,10 +29,11 @@ const PROJECTS = [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
       { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
     ],
-    image: <Sosim />,
+    image: `${imagePath}sosim.svg`,
   },
   {
     title: "COPYT",
+    param: "copyt",
     stacks: [
       {
         stack: "Next.js",
@@ -63,10 +59,11 @@ const PROJECTS = [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
       { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
     ],
-    image: <Copyt />,
+    image: `${imagePath}copyt.svg`,
   },
   {
     title: "감다고",
+    param: "gamdago",
     stacks: [
       {
         stack: "Next.js",
@@ -92,10 +89,11 @@ const PROJECTS = [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
       { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
     ],
-    image: <Gamdago />,
+    image: `${imagePath}gamdago.svg`,
   },
   {
     title: "개인 블로그",
+    param: "blog",
     stacks: [
       {
         stack: "Next.js",
@@ -121,10 +119,11 @@ const PROJECTS = [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/daeeun.dev" },
       { name: "Blog", url: "https://daeeun-dev.vercel.app/" },
     ],
-    image: <Blog />,
+    image: `${imagePath}/blog.svg`,
   },
   {
     title: "포트폴리오 사이트",
+    param: "portfolio",
     overall: ["개인 포트폴리오 사이트", "현재 사이트"],
     stacks: [
       {
@@ -146,10 +145,11 @@ const PROJECTS = [
     links: [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/portfolio" },
     ],
-    image: <Portfolio />,
+    image: `${imagePath}/portfolio.svg`,
   },
   {
     title: "당프소 클론코딩",
+    param: "daangpso",
     overall: ["개인 포트폴리오 사이트", "현재 사이트"],
     stacks: [
       {
@@ -171,10 +171,11 @@ const PROJECTS = [
     links: [
       { name: "GitHub Repo", url: "https://github.com/Dae-une/portfolio" },
     ],
-    image: <Daangpso />,
+    image: `${imagePath}/daangpso.svg`,
   },
   {
     title: "Weekly Run",
+    param: "weekly_run",
     overall: ["러닝SNS 서비스", "디자이너 1명과 개발자 6명으로 6주 진행"],
     role: [
       "Team Leader",
@@ -213,7 +214,7 @@ const PROJECTS = [
         url: "https://github.com/Dae-une/WeeklyRun-FE",
       },
     ],
-    image: <WeeklyRun width="fill" height="100%" />,
+    image: `${imagePath}weekly_run.svg`,
   },
 ];
 

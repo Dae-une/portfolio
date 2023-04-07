@@ -1,8 +1,10 @@
 import { style } from "@vanilla-extract/css";
 
 export const Layout = style({
-  width: "50%",
-  minWidth: "50%",
+  display: "flex",
+  flexDirection: "column",
+  width: "60%",
+  minWidth: "60%",
   margin: "0 auto",
 });
 

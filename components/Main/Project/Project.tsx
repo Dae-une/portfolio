@@ -9,7 +9,7 @@ import * as styles from "./styles.css";
 function Project() {
   return (
     <Controller>
-      <Scene duration={4000} pin triggerHook="onLeave">
+      <Scene duration={6000} pin triggerHook="onLeave">
         {(progress: number) => (
           <div id="Project" className={styles.ProjectSection}>
             <Timeline totalProgress={progress} paused>

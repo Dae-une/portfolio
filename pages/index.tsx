@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Profile from "../components/Profile/Profile";
+import Profile from "../components/Main/Profile/Profile";
 import Project from "../components/Project/Project";
 
 function Home() {
