@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { ProjectType } from "../../types/type";
+import Link from "next/link";
 import * as styles from "./ProjectCard.css";
+import { ProjectType } from "../../../types/type";
 
 interface ProjectCardProps {
   margin: "left" | "right";
@@ -11,7 +12,14 @@ interface ProjectCardProps {
 const ProjectCard: FC<ProjectCardProps> = ({ margin, project }) => {
   return (
     <div className={styles.Card({ margin })}>
-      <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
+      <Link
+        href={{
+          pathname: "/exhibition",
+          query: project.param,
+        }}
+      >
+        <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
+      </Link>
     </div>
   );
 };

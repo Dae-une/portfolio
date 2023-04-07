@@ -15,8 +15,3 @@ globalStyle("body, h1, h2, h3, h4, h5, h6, p, span", {
   padding: "0",
   wordBreak: "keep-all",
 });
-
-globalStyle("li, ul", {
-  margin: 0,
-  padding: 0,
-});
