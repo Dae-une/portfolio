@@ -15,7 +15,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ margin, project }) => {
       <Link
         href={{
           pathname: "/exhibition",
-          query: project.param,
+          query: { project: project.param },
         }}
       >
         <Image src={`/Images/${project.param}.svg`} alt={project.title} fill />
