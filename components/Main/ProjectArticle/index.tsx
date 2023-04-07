@@ -1,7 +1,7 @@
 import React, { useCallback, useReducer } from "react";
 import { AnimatePresence } from "framer-motion";
 import * as styles from "./styles.css";
-import StackItem from "../StackItem/StackItem";
+import StackItem from "../StackItem";
 
 interface Projects {
   project: {

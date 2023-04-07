@@ -1,7 +1,7 @@
 import React from "react";
 import { Timeline, Tween } from "react-gsap";
 import { Controller, Scene } from "react-scrollmagic";
-import PROJECTS from "../../public/Static/Project/ProjectArticle";
+import PROJECTS from "../../../public/Static/Project/ProjectArticle";
 import ProjectCard from "../ProjectCard";
 
 import * as styles from "./styles.css";

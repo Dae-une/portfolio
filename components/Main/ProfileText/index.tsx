@@ -1,7 +1,7 @@
 import React from "react";
 import { Timeline, Tween } from "react-gsap";
 import * as styles from "./styles.css";
-import FadeIn from "../common/FadeIn/FadeIn";
+import FadeIn from "../common/FadeIn";
 
 const Text = {
   title: "성장에 진심인 개발자",
@@ -14,8 +14,6 @@ type Props = {
 };
 
 function ProfileText({ progress }: Props) {
-  console.log(progress);
-
   return (
     <div className={styles.TextContainer}>
       <div className={styles.TitleContainer}>

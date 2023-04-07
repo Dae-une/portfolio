@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import About from "../components/About/About";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import Profile from "../components/Main/Profile/Profile";
-import Project from "../components/Project/Project";
+import About from "../components/Main/About";
+import Footer from "../components/Main/Footer";
+import Header from "../components/Main/Header";
+import Profile from "../components/Main/Profile";
+import Project from "../components/Main/Project";
 
 function Home() {
   const [visible, setVisible] = useState(false);

@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./style.css";
-import FadeIn from "../common/FadeIn/FadeIn";
+import FadeIn from "../common/FadeIn";
 
 type Props = {
   title: string;

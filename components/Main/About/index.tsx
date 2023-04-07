@@ -3,10 +3,10 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import * as styles from "./styles.css";
 
-import FadeIn from "../common/FadeIn/FadeIn";
-import ProgressBar from "../common/ProgressBar/ProgressBar";
-import AboutArticle from "../AboutArticle/AboutArticle";
-import about from "../../public/Static/About/AboutArticle";
+import FadeIn from "../common/FadeIn";
+import ProgressBar from "../common/ProgressBar";
+import AboutArticle from "../AboutArticle";
+import about from "../../../public/Static/About/AboutArticle";
 
 function About() {
   return (
