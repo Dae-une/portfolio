@@ -3,8 +3,8 @@ export interface DoneType {
   desc?: string[];
 }
 export interface LinksType {
-  name: string;
-  url: string;
+  github: string;
+  website?: string;
 }
 
 export interface ProjectType {
@@ -13,5 +13,5 @@ export interface ProjectType {
   desc: string;
   done: DoneType[];
   stacks: string[];
-  links: LinksType[];
+  links: LinksType;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 import Painting from "../Painting";
 import PROJECTS from "../../../public/Static/Project/ProjectArticle";
 import { NextArrow, PrevArrow } from "../SliderArrows";
+import * as styles from "./FrameSlider.css";
 
 const FrameSlider = () => {
   const router = useRouter();
   const param = router.query.project;
   const index = PROJECTS.findIndex(project => project.param === param);
+  const [light, setLight] = useState(false);
 
   const settings = {
     arrows: true,
@@ -25,14 +27,24 @@ const FrameSlider = () => {
   };
 
   const variants = {
-    hidden: { opacity: 1, display: "block" },
-    visible: { opacity: 0, diplay: "none" },
+    hidden: { opacity: 1 },
+    visible: { opacity: 0 },
   };
 
   const transition = {
-    duration: 3,
-    easeInOut: [0, 0, 0, 0.3, 1],
+    duration: 2,
+    ease: [0, 0, 0, 0, 1],
   };
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (!light) {
+      timer = setTimeout(() => {
+        setLight(true);
+      }, 2000);
+    }
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -47,16 +59,7 @@ const FrameSlider = () => {
         initial="hidden"
         animate="visible"
       >
-        <div
-          style={{
-            width: "100vw",
-            height: "100vh",
-            position: "fixed",
-            zIndex: 1000,
-            backgroundColor: "black",
-            top: 0,
-          }}
-        />
+        <div className={styles.Lgiht({ light })} />
       </motion.div>
     </>
   );

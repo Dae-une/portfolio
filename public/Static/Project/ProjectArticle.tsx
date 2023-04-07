@@ -37,10 +37,10 @@ const PROJECTS: ProjectType[] = [
       "React-Query",
       "Yarn Berry",
     ],
-    links: [
-      { name: "GitHub Repo", url: "https://github.com/so-sim/front" },
-      { name: "사이트 바로가기", url: "https://sosim-manager.com/" },
-    ],
+    links: {
+      github: "https://github.com/so-sim/front",
+      website: "https://sosim-manager.com/",
+    },
   },
   {
     title: "COPYT",
@@ -74,13 +74,10 @@ const PROJECTS: ProjectType[] = [
       "React-Query",
       "Yarn Berry",
     ],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/swcamp-teamP03/COPYT_Frontend",
-      },
-      { name: "사이트 바로가기", url: "https://copyt.softr.app/" },
-    ],
+    links: {
+      github: "https://github.com/swcamp-teamP03/COPYT_Frontend",
+      website: "https://copyt.softr.app/",
+    },
   },
   {
     title: "감정을 먹는 다마고치",
@@ -97,13 +94,10 @@ const PROJECTS: ProjectType[] = [
       },
     ],
     stacks: ["JavaScript", "React", "TypeScript", "Styled-component", "Recoil"],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/egghit/gammeokda",
-      },
-      { name: "사이트 바로가기", url: "https://gammeokda.vercel.app/" },
-    ],
+    links: {
+      github: "https://github.com/egghit/gammeokda",
+      website: "https://gammeokda.vercel.app/",
+    },
   },
   {
     title: "개인 블로그",
@@ -123,13 +117,10 @@ const PROJECTS: ProjectType[] = [
       { title: "모바일 반응형 디자인 적용" },
     ],
     stacks: ["JavaScript", "React", "TypeScript", "Emotion", "Next.Js"],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/Dae-une/Daeeun.dev",
-      },
-      { name: "사이트 바로가기", url: "https://daeeun-dev.vercel.app/" },
-    ],
+    links: {
+      github: "GitHub Repo",
+      website: "https://daeeun-dev.vercel.app/v",
+    },
   },
   {
     title: "포트폴리오 사이트",
@@ -143,16 +134,10 @@ const PROJECTS: ProjectType[] = [
       "@Vanilla-extract",
       "Next.Js",
     ],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/Dae-une/portfolio",
-      },
-      {
-        name: "사이트 바로가기",
-        url: "https://portfolio-two-theta-38.vercel.app/",
-      },
-    ],
+    links: {
+      github: "https://github.com/Dae-une/portfolio",
+      website: "https://portfolio-two-theta-38.vercel.app/",
+    },
   },
   {
     title: "당프소 클론 코딩",
@@ -160,12 +145,9 @@ const PROJECTS: ProjectType[] = [
     desc: "당근마켓 프로덕트 디자이너 채용 사이트 클론 코딩",
     done: [{ title: "마우스 스크롤을 이용한 애니메이션 구현" }],
     stacks: ["JavaScript", "React", "Emotion", "Next.Js"],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/Dae-une/daangn_product-designer_clone",
-      },
-    ],
+    links: {
+      github: "https://github.com/Dae-une/daangn_product-designer_clone",
+    },
   },
   {
     title: "Weekly Run",
@@ -202,16 +184,10 @@ const PROJECTS: ProjectType[] = [
       "Yarn Berry",
       "Styled-components",
     ],
-    links: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/Dae-une/WeeklyRun-FE",
-      },
-      {
-        name: "Demo",
-        url: "https://www.youtube.com/watch?v=wmHWVBSeeHE",
-      },
-    ],
+    links: {
+      website: "https://www.youtube.com/watch?v=wmHWVBSeeHE",
+      github: "https://github.com/Dae-une/WeeklyRun-FE",
+    },
   },
 ];
 

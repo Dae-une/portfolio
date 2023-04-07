@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-export const Flex = style({
+export const Container = style({
   display: "flex",
   width: "100vw",
   height: "100vh",
@@ -15,8 +15,12 @@ export const Frame = style({
   maxHeight: "580px",
   boxSizing: "border-box",
   backgroundColor: "#FEFDFF",
-
   boxShadow: "0 0 0 10px black inset",
+});
+
+export const Flex = style({
+  display: "flex",
+  justifyContent: "space-between",
 });
 
 export const Header = style({
