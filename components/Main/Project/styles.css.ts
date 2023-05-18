@@ -9,7 +9,7 @@ export const ProjectSection = style({
 export const ProjectContainer = style({
   display: "grid",
   gridTemplateRows: " repeat(2, minmax(200px, auto))",
-  gridTemplateColumns: " repeat(8, minmax(150px, auto))",
+  gridTemplateColumns: " repeat(6, minmax(150px, auto))",
   gridAutoFlow: "column",
   padding: "10rem",
   columnGap: "10rem",
