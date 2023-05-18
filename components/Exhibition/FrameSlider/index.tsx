@@ -33,7 +33,7 @@ const FrameSlider = () => {
   };
 
   const transition = {
-    duration: 2,
+    duration: 1,
     ease: [0, 0, 0, 0, 1],
   };
 
@@ -46,7 +46,7 @@ const FrameSlider = () => {
     if (!light) {
       timer = setTimeout(() => {
         setLight(true);
-      }, 2000);
+      }, 1000);
     }
     return () => clearTimeout(timer);
   }, []);
