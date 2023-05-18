@@ -96,7 +96,6 @@ const PROJECTS: ProjectType[] = [
     stacks: ["JavaScript", "React", "TypeScript", "Styled-component", "Recoil"],
     links: {
       github: "https://github.com/egghit/gammeokda",
-      website: "https://gammeokda.vercel.app/",
     },
   },
   {
@@ -119,7 +118,7 @@ const PROJECTS: ProjectType[] = [
     stacks: ["JavaScript", "React", "TypeScript", "Emotion", "Next.Js"],
     links: {
       github: "GitHub Repo",
-      website: "https://daeeun-dev.vercel.app/v",
+      website: "https://daeeun-dev.vercel.app/",
     },
   },
   {
@@ -136,17 +135,6 @@ const PROJECTS: ProjectType[] = [
     ],
     links: {
       github: "https://github.com/Dae-une/portfolio",
-      website: "https://portfolio-two-theta-38.vercel.app/",
-    },
-  },
-  {
-    title: "당프소 클론 코딩",
-    param: "daangpso",
-    desc: "당근마켓 프로덕트 디자이너 채용 사이트 클론 코딩",
-    done: [{ title: "마우스 스크롤을 이용한 애니메이션 구현" }],
-    stacks: ["JavaScript", "React", "Emotion", "Next.Js"],
-    links: {
-      github: "https://github.com/Dae-une/daangn_product-designer_clone",
     },
   },
   {
